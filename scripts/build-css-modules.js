@@ -10,14 +10,14 @@ const matchesP3MediaRule = "@media (color-gamut: p3)";
 Object.keys(allColorScales)
   .filter((key) => !key.includes("P3"))
   .forEach((key) => {
-    let selector = ":root, .light, .light-theme";
+    let selector = ':root, .light, .light-theme, [data-theme="light"]';
 
     if (key === "blackA" || key === "whiteA") {
       selector = ":root";
     }
 
     if (key.includes("Dark")) {
-      selector = ".dark, .dark-theme";
+      selector = '.dark, .dark-theme, [data-theme="dark"]';
     }
 
     const srgbValues = Object.entries(allColorScales).find(

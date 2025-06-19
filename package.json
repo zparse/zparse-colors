@@ -1,5 +1,5 @@
 {
-  "name": "@radix-ui/colors",
+  "name": "@zparse/colors",
   "version": "3.0.0",
   "contributors": [
     "Colm Tuite <colm@workos.com>",
@@ -9,11 +9,11 @@
   "module": "index.mjs",
   "types": "types/index.d.ts",
   "scripts": {
-    "build": "yarn clean && yarn && rollup -c && yarn build-css-modules",
+    "build": "pnpm run clean && pnpm install && pnpm rollup -c && pnpm run build-css-modules",
     "build-css-modules": "node ./scripts/build-css-modules.js",
-    "prepublishOnly": "yarn build",
-    "postpublish": "yarn clean",
-    "clean": "git clean -fdX"
+    "prepublishOnly": "pnpm run build",
+    "postpublish": "pnpm run clean",
+    "clean": "git clean -fdX && rm -f *.d.ts"
   },
   "keywords": [
     "radix",
