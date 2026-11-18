@@ -33,7 +33,7 @@
     "clean": "git clean -fdX"
   },
   "devDependencies": {
-    "@types/node": "^24",
+    "@types/node": "^26.6.6",
     "prettier": "^3.6.2",
     "tsup": "^8.5.0",
     "typescript": "^5.9.2"
